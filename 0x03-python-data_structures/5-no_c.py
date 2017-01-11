@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 def no_c(my_string):
     my_list = []
+    new_str = ""
     if my_string is not None:
         for i in my_string:
             if (i != 'c' and i != 'C'):
                 my_list.append(i)
-        return ("").join(my_list)
+        new_str = ("").join(my_list)
+        return new_str
