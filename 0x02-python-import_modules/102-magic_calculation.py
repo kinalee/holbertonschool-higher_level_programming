@@ -8,6 +8,3 @@ def magic_calculation(a, b):
         return (c)
     sub(a, b)
     return None
-
-import dis
-print(dis.dis(magic_calculation))
