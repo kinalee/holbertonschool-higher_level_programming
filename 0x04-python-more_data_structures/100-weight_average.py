@@ -8,8 +8,6 @@ def weight_average(my_list=[]):
         mul = 1
         for j in i:
             mul *= j
-        print("mul:",mul)
         div += i[1]
         sum += mul
-        print("div:",div,"sum:",sum)
     return sum / div
