@@ -2,12 +2,14 @@
 def weight_average(my_list=[]):
     sum = 0
     div = 0
-    if my_list == {} or my_list is None:
+    if my_list == [] or my_list is None:
         return 0
     for i in my_list:
         mul = 1
         for j in i:
             mul *= j
+        print("mul:",mul)
         div += i[1]
         sum += mul
+        print("div:",div,"sum:",sum)
     return sum / div
