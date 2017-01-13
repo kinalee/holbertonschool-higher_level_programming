@@ -5,7 +5,7 @@ def best_score(my_dict):
     tmp = list(my_dict.values())
     tmp = tmp[0]
     for i in my_dict:
-        if my_dict[i] > tmp:
+        if my_dict[i] >= tmp:
             tmp = my_dict[i]
             best = i
     return best
