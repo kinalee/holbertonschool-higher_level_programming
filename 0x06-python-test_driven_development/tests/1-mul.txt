@@ -59,9 +59,11 @@ Testing Booleans
 3
 >>> mul(3, False)
 0
-
+>>> mul(True, False)
+0
 
 Testing Characters and Strings
+
 >>> mul(3, 'a')
 'aaa'
 >>> mul('b', 3)
@@ -70,3 +72,16 @@ Testing Characters and Strings
 'hihihi'
 >>> mul(1, "hello")
 'hello'
+
+
+Testing None
+
+>>> mul(1, None)
+Traceback (most recent call last):
+...
+TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
+>>> mul(None, 2)
+Traceback (most recent call last):
+...
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+
