@@ -135,3 +135,5 @@ NameError: name '____mul' is not defined
 Traceback (most recent call last):
 ...
 NameError: name 'hurl' is not defined
+>>> mul(1e1, 1e10)
+100000000000.0
