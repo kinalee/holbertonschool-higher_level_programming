@@ -1,0 +1,28 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(1, 2)
+3
+>>> add_integer('b', 1)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(4, 'y')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer('z', 'l')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(3.0, 7)
+10
+>>> add_integer(4.2, 8)
+12
+>>> add_integer(-10, 13)
+3
+>>> add_integer(8, -27)
+-19
+>>> add_integer(t, 9)
+Traceback (most recent call last):
+...
+NameError: name 't' is not defined
