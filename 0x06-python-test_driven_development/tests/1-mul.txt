@@ -27,9 +27,13 @@ Testing Floats:
 10.0
 >>> mul(float("inf"), 2)
 inf
+>>> mul("hi", 2.1)
+Traceback (most recent call last):
+...
+TypeError: can't multiply sequence by non-int of type 'float'
 
 
-Testing Lists, Tuples, Dictionaries, and Sets
+Testing Lists, Tuples, Dictionaries, and Sets:
 
 >>> mul([1, 2], 2)
 [1, 2, 1, 2]
@@ -47,9 +51,12 @@ TypeError: can't multiply sequence by non-int of type 'list'
 Traceback (most recent call last):
 ...
 TypeError: unsupported operand type(s) for *: 'int' and 'dict'
+>>> mul(('hi', 3), 2)
+('hi', 3, 'hi', 3)
 
 
-Testing Booleans
+
+Testing Booleans:
 
 >>> mul(True, 3)
 3
@@ -62,7 +69,7 @@ Testing Booleans
 >>> mul(True, False)
 0
 
-Testing Characters and Strings
+Testing Characters and Strings:
 
 >>> mul(3, 'a')
 'aaa'
@@ -72,6 +79,10 @@ Testing Characters and Strings
 'hihihi'
 >>> mul(1, "hello")
 'hello'
+>>> mul("holy", "shit")
+Traceback (most recent call last):
+...
+TypeError: can't multiply sequence by non-int of type 'str'
 
 
 Testing None
@@ -85,3 +96,23 @@ Traceback (most recent call last):
 ...
 TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
 
+>>> mul(None, None)
+Traceback (most recent call last):
+...
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'NoneType'
+
+
+Testing Invalid Arguments:
+
+>>> mul(1)
+Traceback (most recent call last):
+...
+TypeError: mul() missing 1 required positional argument: 'b'
+>>> mul(1, 1, 1)
+Traceback (most recent call last):
+...
+TypeError: mul() takes 2 positional arguments but 3 were given
+>>> mul()
+Traceback (most recent call last):
+...
+TypeError: mul() missing 2 required positional arguments: 'a' and 'b'
