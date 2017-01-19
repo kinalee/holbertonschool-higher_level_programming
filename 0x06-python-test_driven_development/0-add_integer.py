@@ -14,4 +14,5 @@ def add_integer(a, b):
         raise TypeError("a must be an integer")
     if isinstance(b, (int, float)) is not True:
         raise TypeError("b must be an integer")
-    return (int(a) + int(b))
+    else:
+        return (int(a) + int(b))
