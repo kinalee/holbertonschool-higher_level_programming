@@ -53,7 +53,7 @@ Traceback (most recent call last):
 TypeError: unsupported operand type(s) for *: 'int' and 'dict'
 >>> mul(('hi', 3), 2)
 ('hi', 3, 'hi', 3)
->>> mul({f, u, c, k}, 1)
+>>> mul({'f', 'u', 'c', 'k'}, 1)
 Traceback (most recent call last):
 ...
 TypeError: unsupported operand type(s) for *: 'set' and 'int'
