@@ -47,3 +47,26 @@ TypeError: can't multiply sequence by non-int of type 'list'
 Traceback (most recent call last):
 ...
 TypeError: unsupported operand type(s) for *: 'int' and 'dict'
+
+
+Testing Booleans
+
+>>> mul(True, 3)
+3
+>>> mul(False, 3)
+0
+>>> mul(3, True)
+3
+>>> mul(3, False)
+0
+
+
+Testing Characters and Strings
+>>> mul(3, 'a')
+'aaa'
+>>> mul('b', 3)
+'bbb'
+>>> mul("hi", 3)
+'hihihi'
+>>> mul(1, "hello")
+'hello'
