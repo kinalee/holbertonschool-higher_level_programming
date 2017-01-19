@@ -103,6 +103,10 @@ TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
 Traceback (most recent call last):
 ...
 TypeError: unsupported operand type(s) for *: 'NoneType' and 'NoneType'
+>>> mul(7, lambda x: x)
+Traceback (most recent call last):
+...
+TypeError: unsupported operand type(s) for *: 'int' and 'function'
 
 
 Testing Invalid Arguments:
