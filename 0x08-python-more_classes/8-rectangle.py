@@ -78,9 +78,9 @@ class Rectangle:
 
     def __str__(self):
         """ make object readable """
-        s = ""
+        string = ""
         if self.__width == 0 or self.__height == 0:
-            return s
+            return string
         else:
             return '\n'.join(str(self.print_symbol) * self.__width
                              for i in range(self.__height))
