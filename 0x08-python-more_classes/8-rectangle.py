@@ -26,13 +26,14 @@ class Rectangle:
     def width(self, value):
         """
         - sets width
-        - raise errors when value is not int or value is less than 0
+        - raises errors when value is not int or value is less than 0
         """
         if type(value) is not int:
             raise TypeError('width must be an integer')
         if value < 0:
             raise ValueError('width must be >= 0')
-        self.__width = value
+        else:
+            self.__width = value
 
     @property
     def height(self):
@@ -73,8 +74,8 @@ class Rectangle:
 
     def __repr__(self):
         """ returns the string representation of the object """
-        return "{}({}, {})".format(self.__class__.__name__,
-                                   self.__width, self.__height)
+        return "{:s}({:s}, {:s})".format(self.__class__.__name__,
+                                         self.__width, self.__height)
 
     def __del__(self):
         """ destructs method """
