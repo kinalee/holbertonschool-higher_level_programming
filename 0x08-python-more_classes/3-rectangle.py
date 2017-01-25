@@ -60,7 +60,7 @@ class Rectangle:
     def __str__(self):
         """ make object readable """
         if self.__width == 0 or self.__height == 0:
-            return 0
+            return str()
         else:
             return '\n'.join(('#' * self.__width)
                              for i in range(self.__height))
