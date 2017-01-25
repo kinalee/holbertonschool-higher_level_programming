@@ -6,7 +6,7 @@ class that defines rectangle
 
 
 class Rectangle:
-    """ initializes instance attribute width and height  """
+    """ initializes instance attribute width and height """
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
