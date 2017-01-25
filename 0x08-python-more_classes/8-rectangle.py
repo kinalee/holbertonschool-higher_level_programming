@@ -13,7 +13,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """ initializes instance attribute width and height """
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -80,7 +80,7 @@ class Rectangle:
 
     def __del__(self):
         """ destructs method """
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @staticmethod
