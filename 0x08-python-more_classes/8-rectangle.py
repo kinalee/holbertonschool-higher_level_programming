@@ -6,6 +6,8 @@ class that defines rectangle
 
 
 class Rectangle:
+    "Rectangle class"
+
     number_of_instances = 0
     print_symbol = "#"
 
@@ -47,7 +49,8 @@ class Rectangle:
             raise TypeError('height must be an integer')
         if value < 0:
             raise ValueError('height must be >= 0')
-        self.__height = value
+        else:
+            self.__height = value
 
     def area(self):
         """ returns the area of rectangle """
@@ -81,10 +84,10 @@ class Rectangle:
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """ returns the biggest rectangle """
-        if rect_1 in Rectangle.__dict__ is not True:
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        if rect_2 in Rectangle.__dict__ is not True:
-            raise TypeError("rect_1 must be an instance of Rectangle")
+        if isinstance(rect_1, Rectangle) is not True:
+            raise TypeError('rect_1 must be an instance of Rectangle')
+        if isinstance(rect_2, Rectangle) is not True:
+            raise TypeError('rect_1 must be an instance of Rectangle')
         if rect_1.area() > rect_2.area() or rect_1.area() == rect_2.area():
             return rect_1
         if rect_2.area() > rect_1.area():
