@@ -11,4 +11,3 @@ class Square(Rectangle):
     def __init__(self, size):
         """ initializes instance attribute size"""
         super().__init__(size, size)
-        self.__size = size
