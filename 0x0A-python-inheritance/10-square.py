@@ -3,6 +3,7 @@
 10-square
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Rectangle(BaseGeometry):
@@ -22,6 +23,7 @@ class Rectangle(BaseGeometry):
         """ makes object readable """
         return "[{:s}] {:d}/{:d}".format(__class__.__name__,
                                          self.__width, self.__height)
+
 
 class Square(Rectangle):
     """ Square class """
