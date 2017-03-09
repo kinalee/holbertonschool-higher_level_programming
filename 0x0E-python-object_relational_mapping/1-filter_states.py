@@ -10,11 +10,12 @@ if __name__ == "__main__":
                          db=sys.argv[3])
 
     cursor = db.cursor()
-    cursor.execute(""" SELECT * FROM states WHERE name LIKE 'N%'
+    cursor.execute(""" SELECT * FROM states
     ORDER BY states.id ASC """)
 
     for data in cursor.fetchall():
-        print(data)
+        if data[1][0] == 'N':
+            print(data)
 
     cursor.close()
     db.close()
