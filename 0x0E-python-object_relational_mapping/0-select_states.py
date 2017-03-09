@@ -15,5 +15,5 @@ if __name__ == "__main__":
     for data in cursor.fetchall():
         print(data)
 
-        cursor.close()
-        db.close()
+    cursor.close()
+    db.close()
