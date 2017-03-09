@@ -10,11 +10,12 @@ if __name__ == "__main__":
                          db="{:s}".format(sys.argv[3]))
 
     cursor = db.cursor()
-    cursor.execute(""" SELECT * FROM states WHERE name=%s
-    ORDER BY states.id ASC """, (sys.argv[4],))
+    cursor.execute(""" SELECT * FROM states
+    ORDER BY states.id ASC """)
 
     for data in cursor.fetchall():
-        print(data)
+        if data[1] == sys.argv[4]:
+            print(data)
 
     cursor.close()
     db.close()
