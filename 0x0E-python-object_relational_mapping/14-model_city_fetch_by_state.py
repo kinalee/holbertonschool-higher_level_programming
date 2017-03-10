@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for data in session.query(City, State).filter(City.state_id == State.id
-    ).order_by(City.id):
+    for data in session.query(City, State).filter(City.state_id ==
+                                                  State.id).order_by(City.id):
         print("{:s}: ({:d}) {:s}"
               .format(data.State.name, data.City.id, data.City.name))
