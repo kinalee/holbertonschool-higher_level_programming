@@ -4,8 +4,8 @@ from sqlalchemy import Column, Integer, String
 """
 First state model
 """
-
 Base = declarative_base()
+
 
 class State(Base):
     __tablename__ = 'states'
