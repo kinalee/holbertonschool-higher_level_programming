@@ -15,4 +15,7 @@ if __name__ == "__main__":
     session = Session()
 
     data = session.query(State).first()
-    print("{:d}: {:s}".format(data.id, data.name))
+    if data == None:
+        print("Nothing")
+    else:
+        print("{:d}: {:s}".format(data.id, data.name))
