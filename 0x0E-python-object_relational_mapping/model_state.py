@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from SQLAlchemy import *
+from sqlalchemy import *
 """
 First state model
 """
