@@ -22,4 +22,4 @@ if __name__ == "__main__":
         if data.name == state:
             print(data.id)
             exit()
-    print("Not Found")
+    print("Not found")
