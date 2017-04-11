@@ -11,6 +11,5 @@ if __name__ == "__main__":
     r = requests.get(sys.argv[1])
     try:
         print(r.text)
-    except:
-        err = r.status_code
-        print("Error code: {}".format(err))
+    except r.status_code as e:
+        print("Error code: {}".format(e))
