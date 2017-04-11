@@ -13,4 +13,4 @@ if __name__ == "__main__":
         print(r.text)
     except:
         err = r.status_code
-        print("Error code: {:d}".format(err))
+        print("Error code: {}".format(err))
