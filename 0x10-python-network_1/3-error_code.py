@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import sys
-import urllib.request
-import urllib.error
 """
 Takes in a URL, sends a request to the URL
 and displays the body of the response
 """
+import sys
+import urllib.request
+import urllib.error
 
 
 if __name__ == "__main__":

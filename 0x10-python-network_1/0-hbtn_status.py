@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-import urllib.request
 """
 Fetches https://intranet.hbtn.io/status
 """
+import urllib.request
 
 
 if __name__ == "__main__":
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as r:
         page = r.read()
     print("Body response:")
-    print("\t - type: {:}".format(type(page)))
-    print("\t - content: {:}".format(page))
-    print("\t - utf8 content: ")
+    print("\t- type: {:}".format(type(page)))
+    print("\t- content: {:}".format(page))
+    print("\t- utf8 content: {:}".format(page.decode('utf-8')))

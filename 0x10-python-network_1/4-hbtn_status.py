@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import requests
 """
 Fetches https://intranet.hbtn.io/status using requests package
 """
+import requests
 
 
 if __name__ == "__main__":
