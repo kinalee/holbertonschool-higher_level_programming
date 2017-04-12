@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     r = requests.post(url, data=data)
     if r.json():
-        print("[{}] {}".format(r['id'], r['name']))
+        print("[{}] {}".format(r.json()['id'], r.json()['name']))
     else:
         if not r.json():
             print("No result")
