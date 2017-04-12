@@ -11,5 +11,8 @@ if __name__ == "__main__":
     u = sys.argv[1]
     p = sys.argv[2]
     github = "https://api.github.com/user"
-    req = requests.get(github, auth=(u, p)).json()
-    print(req['id'])
+    try:
+        req = requests.get(github, auth=(u, p)).json()
+        print(req['id'])
+    except:
+        print("None")
