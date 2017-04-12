@@ -9,7 +9,7 @@ import requests
 if __name__ == "__main__":
     swapi = "https://swapi.co/api/people/?search=" + sys.argv[1]
     req = requests.get(swapi)
-    r = dict(req.json())
+    r = req.json()
     print("Number of result: {}".format(r['count']))
 
     for data in r['results']:
