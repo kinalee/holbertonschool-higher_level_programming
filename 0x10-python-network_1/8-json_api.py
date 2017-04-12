@@ -11,8 +11,12 @@ if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
     if len(sys.argv) < 2:
         letter = ""
+    elif sys.argv[1] not str:
+        print("No result")
+        return
     else:
         letter = sys.argv[1]
+
     data = {'q': letter}
     r = requests.post(url, data=data)
     try:
