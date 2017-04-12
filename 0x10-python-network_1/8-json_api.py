@@ -13,13 +13,13 @@ if __name__ == "__main__":
         letter = ""
     else:
         letter = sys.argv[1]
-
     data = {'q': letter}
     r = requests.post(url, data=data)
-    if r.json():
+    try:
         rjs = r.json()
-        print("[{}] {}".format(rjs['id'], rjs['name']))
-    elif not r.json():
-        print("No result")
-    else:
+        if rjs['id'] is None:
+            print("No result")
+        else:
+            print("[{}] {}".format(rjs['id'], rjs['name']))
+    except:
         print("Not a valid JSON")
