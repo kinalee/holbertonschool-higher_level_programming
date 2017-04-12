@@ -19,7 +19,7 @@ if __name__ == "__main__":
     if r.json():
         rjs = r.json()
         print("[{}] {}".format(rjs['id'], rjs['name']))
-    if not r.json():
+    elif not r.json():
         print("No result")
     else:
         print("Not a valid JSON")
