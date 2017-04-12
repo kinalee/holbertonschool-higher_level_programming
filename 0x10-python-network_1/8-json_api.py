@@ -11,19 +11,15 @@ if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
     if len(sys.argv) < 2:
         letter = ""
-    elif sys.argv[1] not str:
-        print("No result")
-        return
     else:
         letter = sys.argv[1]
 
     data = {'q': letter}
     r = requests.post(url, data=data)
-    try:
+    if r.json():
         rjs = r.json()
-        if rjs['id'] is None:
-            print("No result")
-        else:
-            print("[{}] {}".format(rjs['id'], rjs['name']))
-    except:
-            print("Not a valid JSON")
+        print("[{}] {}".format(rjs['id'], rjs['name']))
+    if not rjs:
+        print("No result")
+    else:
+        print("Not a valid JSON")
