@@ -9,22 +9,17 @@ import requests
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    if len(sys.argv) == 1:
-        print("No result")
-        return
-    if len(sys.argv) > 1 and type(sys.argv[1]) not str:
-        print("No result")
-        return
-    elif len(sys.argv) < 2:
+    if len(sys.argv) < 2:
         letter = ""
     else:
         letter = sys.argv[1]
     data = {'q': letter}
     r = requests.post(url, data=data)
     try:
-        print("[{}] {}".format(r.json()['id'], r.json()['name']))
-    except:
-        if r.json()['id'] is None:
+        rjs = r.json()
+        if rjs['id'] is None:
             print("No result")
         else:
+            print("[{}] {}".format(rjs['id'], rjs['name']))
+    except:
             print("Not a valid JSON")
