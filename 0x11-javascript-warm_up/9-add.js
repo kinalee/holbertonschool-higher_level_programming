@@ -3,7 +3,7 @@
 // The first argument is the first integer
 // The second argument is the second integer
 
-function add(a, b) {
+function add (a, b) {
   console.log(a + b);
 }
 
