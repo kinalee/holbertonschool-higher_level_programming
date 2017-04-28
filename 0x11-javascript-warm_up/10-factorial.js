@@ -13,4 +13,4 @@ function factorial (num) {
   console.log(factHelper(num));
 }
 
-factorial(Number(process.argv[2]));
+factorial(parseInt(process.argv[2]));
