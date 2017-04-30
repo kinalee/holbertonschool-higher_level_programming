@@ -17,4 +17,4 @@ exports.Square = function Square (size) {
       console.log(c.repeat(this.size));
     }
   };
-};
+}
