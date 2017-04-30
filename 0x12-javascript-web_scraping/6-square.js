@@ -13,7 +13,7 @@ exports.Square = function Square (size) {
     if (c === undefined) {
       c = 'X';
     }
-    for (var i = 0; i < size; ++i) {
+    for (let i = 0; i < size; ++i) {
       console.log(c.repeat(this.size));
     }
   };

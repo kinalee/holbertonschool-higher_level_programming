@@ -12,7 +12,7 @@ exports.Rectangle = function Rectangle (w, h) {
   }
   // Instance method called print() that prints the rectangle using the character X
   this.print = function () {
-    for (var i = 0; i < this.height; ++i) {
+    for (let i = 0; i < this.height; ++i) {
       console.log('X'.repeat(this.width));
     }
   };
