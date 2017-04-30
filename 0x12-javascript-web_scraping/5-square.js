@@ -7,4 +7,4 @@ exports.Square = function Square (size) {
   Rectangle.call(this, size, size);
 };
 
-exports.Rectangle = Rectangle;
+Square.prototype = Object.create(Rectangle.prototype);
