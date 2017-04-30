@@ -4,5 +4,5 @@
 const Rectangle = require('./4-rectangle').Rectangle;
 
 exports.Square = function Square (size) {
-  Rectangle.prototype.constructor.call(this, size, size);
+  Rectangle.call(this, size, size);
 };
