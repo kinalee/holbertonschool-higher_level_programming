@@ -10,7 +10,7 @@ exports.Square = function Square (size) {
   // Instance method called charPrint(c) that prints the rectangle using the character c
   // If c is undefined, use the character X
   Square.prototype.charPrint = function (c) {
-    if (!c) {
+    if (c === undefined) {
       c = 'X';
     }
     for (var i = 0; i < size; ++i) {
