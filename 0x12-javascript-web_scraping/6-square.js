@@ -4,7 +4,7 @@
 const Square0 = require('./5-square').Square;
 
 exports.Square = function Square (size) {
-  Square0.call(this, size, size);
+  Square0.call(this, size);
 
   // Instance method called charPrint(c) that prints the rectangle using the character c
   // If c is undefined, use the character X
