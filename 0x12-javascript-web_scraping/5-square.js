@@ -7,5 +7,4 @@ exports.Square = function Square (size) {
   Rectangle.prototype.constructor.call(this);
   this.width = size;
   this.height = size;
-  this.size = size;
 };
