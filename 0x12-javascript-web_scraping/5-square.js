@@ -1,35 +1,8 @@
 #!/usr/bin/node
 // class Square that defines a sqaure and inherits from Rectangle of 4-rectangle
 
-function Rectangle (w, h) {
-  // Initialize the instance attribute width with the value of w
-  // Initialize the instance attribute height with the value of h
-  // If w or h is equal to 0 or not a positive integer, create an empty object
-  if (w > 0 && h > 0) {
-    this.width = w;
-    this.height = h;
-  }
-  // Instance method called print() that prints the rectangle using the character X
-  this.print = function () {
-    for (let i = 0; i < this.height; ++i) {
-      console.log('X'.repeat(this.width));
-    }
-  };
-  // Instance method called rotate() that exchanges the width and the height of the rectangle
-  this.rotate = function () {
-    [this.width, this.height] = [this.height, this.width];
-  };
-  // Instance method called double() that multiples the width and the height of the rectangle by 2
+const Rectangle = require('./4-rectangle').Rectangle;
 
-  this.double = function () {
-    this.width *= 2;
-    this.height *= 2;
-  };
-}
-
-function Square (size) {
+module.exports.Square = function Square (size) {
   Rectangle.call(this, size, size);
-}
-
-exports.Rectangle = Rectangle;
-exports.Square = Square;
+};
