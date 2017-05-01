@@ -3,6 +3,8 @@
 
 const Rectangle = require('./4-rectangle').Rectangle;
 
-module.exports.Square = function Square (size) {
-  Rectangle.call(this, size, size);
+exports.Square = function Square (size) {
+  if (size > 0) {
+    Rectangle.call(this, size, size);
+  }
 };
