@@ -8,14 +8,14 @@ request(url, function (err, body) {
   if (err) {
     console.error(err);
   } else {
-      let count = 0;
-      for (let data of JSON.parse(body.body)['results']) {
-        for (let w of data['characters']) {
-          if (w == wedge) {
-            ++count;
-          }
+    let count = 0;
+    for (let data of JSON.parse(body.body)['results']) {
+      for (let w of data['characters']) {
+        if (w === wedge) {
+          ++count;
         }
       }
-    console.log(count);
     }
+    console.log(count);
+  }
 });
