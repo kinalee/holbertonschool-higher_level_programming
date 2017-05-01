@@ -8,6 +8,6 @@ request(url, function (err, body) {
   if (err) {
     console.log(err);
   } else {
-    console.log(JSON.parse(body).title);
+    console.log(JSON.parse(body.body)['title']);
   }
 });
